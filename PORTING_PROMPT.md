@@ -18,6 +18,9 @@ DISCOVERY (do this first; I am giving you only the ROM files)
    (C) hand re-implementation of the game logic (last resort; only with my agreement, since it cannot be verified byte for byte).
 
 TRACES AND REFERENCE (you produce these yourself; do not ask me for them)
+- Set up ALL emulators first, up front, not one at a time when needed: MAME, Stella, Mesen, FS-UAE (target testing), qemu-m68k, and DOSBox (DOSBox-X if
+  available) for any DOS-era tools, sources or PC versions of the game. Try the package manager first, then the upstream release or source build.
+  Record each tool's version and how it was obtained, run a smoke test on each, and for any that fail name the exact host you need unblocked.
 - Get an independent reference emulator (MAME, Stella, Mesen, ... whichever fits the board) by installing it or building it from source.
   If the network blocks it, say exactly which host you need unblocked, and meanwhile write your own reference emulator from the CPU and
   chip specifications and the driver source. In that case mark every fidelity claim "checked only against my own emulator".
