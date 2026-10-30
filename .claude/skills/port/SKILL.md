@@ -11,7 +11,7 @@ Source of this text: PORTING_PROMPT.md in the project root. The Kickstart ROM us
 
 DISCOVERY (do this first; I am giving you only the ROM files)
 1. Identify the game and board by matching file names, sizes and checksums against MAME's driver source / romset databases (or the iNES header
-   for NES, the cartridge type for Atari). If network access to MAME/Stella source is unavailable, say so, then continue with what the ROMs prove.
+   for NES, the "SEGA" header at 0x100 for Genesis/Mega Drive, the cartridge type for Atari). If network access to MAME/Stella source is unavailable, say so, then continue with what the ROMs prove.
 2. From the matching driver, fill in every field of "SOURCE HARDWARE" below. Quote the driver file and lines you used.
 3. From the ROMs and a reference-emulator trace, determine: code vs. data, computed-jump targets, self-modifying code, banked code, peak cycles
    per frame per CPU, video model (framebuffer / tile+sprite / racing-the-beam), colours and sprites, and sound engine type.
@@ -24,7 +24,7 @@ DISCOVERY (do this first; I am giving you only the ROM files)
    (C) hand re-implementation of the game logic (last resort; only with my agreement, since it cannot be verified byte for byte).
 
 TRACES AND REFERENCE (you produce these yourself; do not ask me for them)
-- Set up ALL emulators first, up front, not one at a time when needed: MAME, Stella, Mesen, FS-UAE (target testing), qemu-m68k, and DOSBox (DOSBox-X if
+- Set up ALL emulators first, up front, not one at a time when needed: MAME, Stella, Mesen, Genesis Plus GX and BlastEm (Genesis/Mega Drive), FS-UAE (target testing), qemu-m68k, and DOSBox (DOSBox-X if
   available) for any DOS-era tools, sources or PC versions of the game. Try the package manager first, then the upstream release or source build.
   Record each tool's version and how it was obtained, run a smoke test on each, and for any that fail name the exact host you need unblocked.
 - Get an independent reference emulator (MAME, Stella, Mesen, ... whichever fits the board) by installing it or building it from source.

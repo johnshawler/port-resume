@@ -56,7 +56,7 @@ CONTINUING THE WORK
 [Everything below is the same as PORTING_PROMPT.md and applies in full to the rest of the work.]
 
 TRACES AND REFERENCE (you produce these yourself; do not ask me for them)
-- Set up ALL emulators first, up front, not one at a time when needed: MAME, Stella, Mesen, FS-UAE (target testing), qemu-m68k, and DOSBox (DOSBox-X if
+- Set up ALL emulators first, up front, not one at a time when needed: MAME, Stella, Mesen, Genesis Plus GX and BlastEm (Genesis/Mega Drive), FS-UAE (target testing), qemu-m68k, and DOSBox (DOSBox-X if
   available) for any DOS-era tools, sources or PC versions of the game. Try the package manager first, then the upstream release or source build.
   Record each tool's version and how it was obtained, run a smoke test on each, and for any that fail name the exact host you need unblocked.
 - Get an independent reference emulator (MAME, Stella, Mesen, ... whichever fits the board) by installing it or building it from source.
